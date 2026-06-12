@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Les Races de Chiens</title>
+    <link rel="stylesheet" href="/static/css/principale.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">DogPedia</div>
+        <nav class="nav-links">
+            <a href="/accueil">Accueil</a>
+            <a href="/races" class="active">Les Races</a>
+            <a href="/admin">Admin (Backoffice)</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <h2> Liste Complète des Races</h2>
+        <p class="instruction">Cliquez sur une race pour dérouler ses informations détaillées.</p>
+        
+        <div class="races-flex-grid">
+            {{liste_races}}
+        </div>
+    </main>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

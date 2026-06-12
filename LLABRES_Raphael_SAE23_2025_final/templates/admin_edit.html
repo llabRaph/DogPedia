@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier {{nom}}</title>
+    <link rel="stylesheet" href="/static/css/admin_edit.css">
+</head>
+<body>
+    <div class="edit-container">
+        <h2>✏️ Modifier la race : {{nom}}</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label>Nom de la Race :</label>
+                <input type="text" name="nomRace" value="{{nom}}" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Pays d'Origine :</label>
+                <input type="text" name="paysOrigine" value="{{pays}}">
+            </div>
+            
+            <div class="form-group">
+                <label>Taille Moyenne (cm) :</label>
+                <input type="number" step="0.1" name="tailleMoy" value="{{taille}}">
+            </div>
+            
+            <div class="form-group">
+                <label>Espérance de vie (ans) :</label>
+                <input type="number" name="dureeVie" value="{{vie}}">
+            </div>
+            
+            <div class="form-group">
+                <label>Climat Idéal :</label>
+                <input type="text" name="climat" value="{{climat}}">
+            </div>
+            
+            <div class="form-group">
+                <label>Description :</label>
+                <textarea name="description" rows="4">{{desc}}</textarea>
+            </div>
+            
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+        <a href="/admin" class="btn-back">Annuler et retourner au tableau</a>
+    </div>
+</body>
+</html>

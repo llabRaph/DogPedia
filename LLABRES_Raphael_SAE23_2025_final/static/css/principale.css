@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    height: 64px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 48px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.nav-links a {
+    color: #4a4a6a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2ABFBF;
+    background-color: #f0fafa;
+}
+
+.nav-links a.active {
+    color: #2ABFBF;
+    font-weight: 700;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.main-container {
+    margin-top: 64px;
+    padding: 48px;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.instruction {
+    color: #7a7a9a;
+    font-size: 15px;
+    margin-bottom: 32px;
+    margin-top: 0px;
+}
+
+/* --- LISTE DES RACES --- */
+.races-flex-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.race-card {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: box-shadow 0.2s;
+}
+
+.race-card:hover {
+    box-shadow: 0px 4px 20px rgba(42, 191, 191, 0.12);
+}
+
+.race-title {
+    padding: 16px 24px;
+    margin: 0px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    color: #1a1a2e;
+    transition: background-color 0.2s;
+}
+
+.race-title:hover {
+    background-color: #f0fafa;
+}
+
+.race-title::before {
+    content: "RACE";
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 11px;
+    background-color: #2ABFBF;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.race-details {
+    padding: 24px;
+    background-color: #FFF8F0;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.race-details p {
+    margin: 0px;
+    font-size: 14px;
+    color: #4a4a6a;
+    line-height: 1.6;
+}
+
+.race-details p strong {
+    color: #1a1a2e;
+}
+
+/* --- SÉLECTEUR DE PHOTOS --- */
+.photo-selector {
+    margin-top: 16px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.photo-selector label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #7a7a9a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.photo-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.photo-btn {
+    padding: 7px 18px;
+    border: 2px solid #e8e8e8;
+    background-color: #ffffff;
+    color: #4a4a6a;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.photo-btn:hover {
+    border-color: #2ABFBF;
+    color: #2ABFBF;
+}
+
+.photo-btn.active {
+    background-color: #2ABFBF;
+    border-color: #2ABFBF;
+    color: #ffffff;
+}
+
+.image-container {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.zoomable-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.zoomable-img:hover {
+    transform: scale(1.05);
+}

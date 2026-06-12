@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    height: 64px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 48px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.nav-links a {
+    color: #4a4a6a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2ABFBF;
+    background-color: #f0fafa;
+}
+
+.nav-links a.active {
+    color: #2ABFBF;
+    font-weight: 700;
+}
+
+/* --- WRAPPER ADMIN --- */
+.admin-wrapper {
+    margin-top: 64px;
+    padding: 48px;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0px 0px 16px 0px;
+}
+
+/* --- SECTION STATS --- */
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stats-section .chart-container {
+    background-color: #2d3748;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- SECTION CRUD --- */
+.crud-section {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 32px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-crud {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+    width: 100%;
+}
+
+/* --- RECHERCHE --- */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.search-form input {
+    padding: 9px 14px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1a1a2e;
+    background-color: #fafafa;
+    transition: border-color 0.2s;
+}
+
+.search-form input:focus {
+    border-color: #2ABFBF;
+    outline: none;
+}
+
+.search-form button {
+    background-color: #2ABFBF;
+    color: #ffffff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-form button:hover {
+    background-color: #22a5a5;
+}
+
+/* --- AJOUT D'UNE RACE --- */
+.add-card {
+    background-color: #FFF8F0;
+    border: 1px solid #e8e8e8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-card h3 {
+    margin: 0px 0px 14px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.inline-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.inline-form input {
+    padding: 9px 12px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    font-size: 14px;
+    flex: 1;
+    min-width: 130px;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+}
+
+.inline-form input:focus {
+    border-color: #2ABFBF;
+    outline: none;
+}
+
+.inline-form button {
+    background-color: #2ABFBF;
+    color: #ffffff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.inline-form button:hover {
+    background-color: #22a5a5;
+}
+
+/* --- TABLEAU --- */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.crud-table th {
+    background-color: #f7f8fc;
+    color: #7a7a9a;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.crud-table td {
+    padding: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #1a1a2e;
+}
+
+.crud-table tr:hover td {
+    background-color: #f0fafa;
+}
+
+.btn-edit {
+    color: #2ABFBF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.btn-edit:hover {
+    color: #22a5a5;
+}
+
+.btn-delete {
+    color: #e53e3e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.btn-delete:hover {
+    color: #c53030;
+}

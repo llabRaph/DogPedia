@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f7f8fc;
+    color: #1a1a2e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- MODALE DE MODIFICATION --- */
+.edit-container {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 40px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.edit-container h2 {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a2e;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #7a7a9a;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #fafafa;
+    border: 1px solid #e8e8e8;
+    color: #1a1a2e;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2ABFBF;
+    outline: none;
+    background-color: #ffffff;
+}
+
+button {
+    background-color: #2ABFBF;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #22a5a5;
+}
+
+.btn-back {
+    color: #7a7a9a;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px;
+    align-self: center;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #2ABFBF;
+}

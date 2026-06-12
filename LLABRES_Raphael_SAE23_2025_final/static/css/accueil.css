@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter_18pt-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    height: 64px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 48px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e8e8e8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.nav-links a {
+    color: #4a4a6a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2ABFBF;
+    background-color: #f0fafa;
+}
+
+.nav-links a.active {
+    color: #2ABFBF;
+    font-weight: 700;
+}
+
+/* --- HERO BANNER  --- */
+.welcome-banner {
+    width: 100%;
+    background-color: #2ABFBF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 48px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.welcome-banner h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0px 0px 12px 0px;
+    letter-spacing: -1px;
+}
+
+.welcome-banner p {
+    color: #e0f7f7;
+    font-size: 17px;
+    margin: 0px;
+    line-height: 1.6;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.main-container {
+    padding: 0px;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- SECTION FORMULAIRE + CLASSEMENT --- */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    width: 100%;
+    flex: 1;
+}
+
+/* --- FORMULAIRE VOTE --- */
+.form-card {
+    flex: 1;
+    padding: 48px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-right: 1px solid #e8e8e8;
+}
+
+.form-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+form input,
+form select {
+    padding: 12px 14px;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    background-color: #fafafa;
+    color: #1a1a2e;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #2ABFBF;
+    outline: none;
+    background-color: #ffffff;
+}
+
+form button {
+    background-color: #2ABFBF;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #22a5a5;
+}
+
+/* --- CLASSEMENT --- */
+.ranking-card {
+    flex: 1;
+    background-color: #FFF8F0;
+    padding: 48px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.ranking-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+.ranking-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ranking-list li {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    padding: 14px 18px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.ranking-list li strong {
+    color: #2ABFBF;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #2d3748;
+    color: #a0aec0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 48px;
+    font-size: 13px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 8px;
+}
+
+.footer a {
+    color: #2ABFBF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

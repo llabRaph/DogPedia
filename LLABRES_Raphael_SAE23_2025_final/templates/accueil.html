@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Encyclopédie Canine - Accueil</title>
+    <link rel="stylesheet" href="/static/css/accueil.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">DogPedia</div>
+        <nav class="nav-links">
+            <a href="/accueil" class="active">Accueil</a>
+            <a href="/races">Les Races</a>
+            <a href="/admin">Admin (Backoffice)</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <section class="welcome-banner">
+            <h1>Bienvenue sur DogPedia</h1>
+            <p>Découvrez tout sur vos fidèles compagnons : origines, comportements et caractéristiques physiques !</p>
+        </section>
+
+        <section class="content-wrapper">
+            
+            <div class="form-card">
+                <h2>Votez pour votre race préférée !</h2>
+                <form method="POST" action="/accueil">
+                    <input type="text" name="pseudo" placeholder="Votre Pseudo" required>
+                    <input type="email" name="mail" placeholder="Votre Email" required>
+                    <input type="number" name="age" placeholder="Votre Âge" min="1" required>
+                    <select name="sexe">
+                        <option value="M">Masculin</option>
+                        <option value="F">Féminin</option>
+                    </select>
+                    <select name="idRacePref" required>
+                        <option value="">-- Choisissez une race --</option>
+                        {{options_races}}
+                    </select>
+                    <button type="submit">Soumettre mon vote</button>
+                </form>
+            </div>
+
+            <div class="ranking-card">
+                <h2>Top des Races Préférées</h2>
+                <ul class="ranking-list">
+                    {{classement}}
+                </ul>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Soutenez la cause animale : <a href="https://www.la-spa.fr" target="_blank">La SPA</a> | <a href="https://www.fondationbrigittebardot.fr" target="_blank">Fondation Brigitte Bardot</a></p>
+    </footer>
+</body>
+</html>
